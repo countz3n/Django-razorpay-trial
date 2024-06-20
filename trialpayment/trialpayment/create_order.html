@@ -1,0 +1,23 @@
+<!-- create_order.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Razorpay Payment</title>
+</head>
+<body>
+    <form action="/success/" method="POST">
+        <script
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="{{ key }}"
+            data-amount="{{ amount }}"
+            data-currency="INR"
+            data-order_id="{{ order_id }}"
+            data-buttontext="Pay with Razorpay"
+            data-name="Your Company Name"
+            data-description="Test Transaction"
+            data-theme.color="#F37254">
+        </script>
+        <input type="hidden" value="Hidden Element" name="hidden">
+    </form>
+</body>
+</html>
